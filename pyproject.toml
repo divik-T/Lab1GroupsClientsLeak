@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "mLab1GroupsClientsLeak"
+version = "0.0.1"
+description = "A dataScience project for completing a task of determine 3-5 groups of clients whose interest in the product has decreased. Project assigned by SberBank as part of DataScienceCamp"
+authors = [
+  { name = "Reut" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "==3.13.2"
+
+
+[tool.ruff]
+line-length = 99
+src = ["mLab1GroupsClientsLeak"]
+include = ["pyproject.toml", "mLab1GroupsClientsLeak/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["mLab1GroupsClientsLeak"]
+force-sort-within-sections = true
+
